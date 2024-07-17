@@ -4,7 +4,10 @@ from aioredis import Redis
 
 from os import environ
 
-from bot.handlers.commands import Start
+from bot.handlers.commands import (
+    Start,
+    Privacy,
+)
 from bot.handlers.business import (
     EditMessage,
     TextMessage,
@@ -25,6 +28,7 @@ async def main():
 
     dp.include_routers(
         Start.router,
+        Privacy.router,
         TextMessage.router,
         DeletMessages.router,
         EditMessage.router,
