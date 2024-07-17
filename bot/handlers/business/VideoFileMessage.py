@@ -5,6 +5,8 @@ from bot.utils.logs import log
 
 router = Router()
 
+VIDEO_PATH = settings.MEDIA_PATH + "video/"
+
 
 @router.message(F.video)
 async def sticker_message(message: Message):

@@ -5,6 +5,7 @@ from bot.database.requests import add_business_voice
 
 router = Router()
 
+VOICE_PATH = settings.MEDIA_PATH + "voice/"
 
 @router.business_message(F.voice)
 async def handler_voice_message(message: Message, bot: Bot):
@@ -13,7 +14,7 @@ async def handler_voice_message(message: Message, bot: Bot):
     file_path = file.file_path
     filename = file_id + ".wav"
     await bot.download_file(
-        file_path=file_path, destination=settings.VOICE_PATH + filename
+        file_path=file_path, destination = VOICE_PATH + filename
     )
     business_connection = await bot.get_business_connection(
         message.business_connection_id

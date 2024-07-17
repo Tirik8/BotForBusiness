@@ -2,7 +2,7 @@ import asyncio
 
 from bot.utils.env import load_env
 from bot.utils.logs import start_logging
-from bot.main import main
+from bot.bot import main
 
 if __name__ == "__main__":
 

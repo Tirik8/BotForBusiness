@@ -3,14 +3,13 @@ from aiogram.types import Message
 from bot.database.requests import add_business_photos
 from config import settings
 
-# from bot.utils.logs import log
 
 router = Router()
 
+PHOTO_PATH = settings.MEDIA_PATH + "photo/"
 
 @router.business_message(F.photo)
 async def handler_business_Photo(message: Message, bot: Bot):
-    # log(message)
     business_connection = await bot.get_business_connection(
         message.business_connection_id
     )
@@ -24,7 +23,7 @@ async def handler_business_Photo(message: Message, bot: Bot):
         filename = file_id + ".jpg"
         filenames.append(filename)
         await bot.download_file(
-            file_path=file_path, destination=settings.PHOTO_PATH + filename
+            file_path=file_path, destination = PHOTO_PATH + filename
         )
 
     business_message_answer = {
