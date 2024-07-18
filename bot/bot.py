@@ -18,7 +18,7 @@ from bot.handlers.business import (
 from bot.database import async_db_main
 
 
-async def main():
+async def bot():
     await async_db_main()
 
     bot = Bot(token=environ.get("BOT_API_KEY"))

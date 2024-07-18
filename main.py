@@ -2,15 +2,17 @@ import asyncio
 
 from bot.utils.env import load_env
 from bot.utils.logs import start_logging
-from bot.bot import main
+from bot.bot import bot
 
-if __name__ == "__main__":
-
+def main():
     load_env()
 
     start_logging()
 
     try:
-        asyncio.run(main())
+        asyncio.run(bot())
     except KeyboardInterrupt:
         pass
+
+if __name__ == "__main__":
+    main()

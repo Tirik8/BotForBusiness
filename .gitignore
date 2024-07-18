@@ -8,3 +8,4 @@ logs/
 .git/
 content/
 alembic/versions/*
+dist/botforbuiness-0.1.0.tar.gz
