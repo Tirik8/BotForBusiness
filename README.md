@@ -5,13 +5,13 @@ In telegram, this bot can be connected in the menu "Telegram Business"
 # Start bot  
 1. In BotFather get token and turn on business mode  
 2. In your tg account go to Settings -> Telegram Business-> Chatbots and enter your bot  
-3. Initialize poetry and install dependencies
+3. Initialize uv and install dependencies
 4. Create .env file with "BOT_API_KEY = [your token]" or pass the token as an argument  
 5. Download and run Redis  
 6. Create derictories: content/photo, content/video, content/voice  
 7. Run the commands:   alembic revision --autogenerate -m "start"   and   alembic upgrade head  
-8. If you with .env file: enter command -> python main.py  
-else: enter command -> python main.py [your bot token]  
+8. If you with .env file: enter command -> uv run main.py  
+else: enter command -> uv run main.py [your bot token]  
 ### If you dont want to connect Redis
 ##### Replace in bot/main.py:  
 "from aiogram.fsm.storage.redis import RedisStorage" -> "from aiogram.fsm.storage.memory import MemoryStorage"  
