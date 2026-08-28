@@ -1,12 +1,11 @@
 [project]
 name = "botforbusiness"
 version = "0.1.0"
-description = "Add your description here"
+description = ""
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
     "aiogram>=3.31.0",
-    "aioredis>=2.0.1",
     "aiosignal>=1.4.0",
     "aiosqlite>=0.22.1",
     "alembic>=1.19.1",

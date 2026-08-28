@@ -2,6 +2,7 @@ import re
 
 
 def answer(message: str) -> str | None:
+    return None
     if message == "сак" or message == "Сак":
         return "Сам сак"
     elif re.fullmatch("•*", message) or re.fullmatch(
